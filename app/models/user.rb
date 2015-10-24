@@ -7,4 +7,7 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
+  scope :tutors , -> { where(type: 'Tutor') }
+  scope :students , -> { where(type: 'Student') }
+  delegate :tutors, :students, to: :users
 end
