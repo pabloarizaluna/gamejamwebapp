@@ -16,7 +16,11 @@ module Merit
       # score 10, :on => 'users#create' do |user|
       #   user.bio.present?
       # end
-      #
+      score 10, :on => 'courses#create', :category => "Monheros" do |user|
+        user.type = 'Tutor'?
+      end
+
+      
       # score 15, :on => 'reviews#create', :to => [:reviewer, :reviewed]
       #
       # score 20, :on => [
