@@ -1,4 +1,4 @@
-<!-- Header Carousel -->
+
 <!-- Header Carousel -->
  <div class="container">
 	 <div class="row">
@@ -6,30 +6,31 @@
 			 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 			 <!-- Indicators -->
 			 <ol class="carousel-indicators">
-				 	 <%= count = 0 %>
-					 <%= if @news %>
-					 <%= @news.each do |new| %>
-					 <%= if count == 0%>
-					 		<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-							<%= count += 1 %>
-					 <%= else %>
-					 		<li data-target="#carousel-example-generic" data-slide-to="<%= count %>"></li>
-					 		<%= count += 1 %>
-					 <%= end %>
+				 	 <% count = 0 %>
+
+					 		<% @news.each do |new| %>
+					 				<% if count == 0%>
+					 						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+									<% count += 1 %>
+					 				<% else %>
+					 						<li data-target="#carousel-example-generic" data-slide-to="<%= count %>"></li>
+					 						<% count += 1 %>
+					 				<% end %>
+							<% end %>
 			 </ol>
 			 <!-- Wrapper for slides -->
-			 <%= @news.each do |new| %>
+			 <% @news.each do |new| %>
 			 <div class="item">
 				 <img src="<%= new.photo %>">
 				 		<!-- Static Header -->
 						<div class="header-text hidden-xs">
 						 		<div class="col-md-12 text-center">
-									<h2><span><%= new.title %></span></h2><br>
-									<h3><span><%= new.description %></span></h3><br>
+									<h2><span><% new.title %></span></h2><br>
+									<h3><span><% new.description %></span></h3><br>
 								</div><!-- /header-text -->
 					 	</div>
 			 </div>
-			 <%= end %>
+			 <% end %>
 			 <!-- Controls -->
 			 <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
 					 <span class="glyphicon glyphicon-chevron-left"></span>
