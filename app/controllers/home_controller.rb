@@ -2,6 +2,11 @@ class HomeController < ApplicationController
   def index
     @courses = Course.all
     @news = News.all
-    render action: "/index"
+    if !@news
+      puts "VACIO!!!!"
+    else
+      puts "TENGO ALGOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO"
+    end
+    render :action => "/index"
   end
 end

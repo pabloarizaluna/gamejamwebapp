@@ -1,4 +1,4 @@
-<!-- Header Carousel -->
+
 <!-- Header Carousel -->
  <div class="container">
 	 <div class="row">
@@ -7,17 +7,15 @@
 			 <!-- Indicators -->
 			 <ol class="carousel-indicators">
 				 	 <% count = 0 %>
-					 <% if @news %>
-  					 <% @news.each do |new| %>
-    					 <% if count == 0%>
-    					 		<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    							<% count += 1 %>
-    					 <% else %>
-    					 		<li data-target="#carousel-example-generic" data-slide-to="<%= count %>"></li>
-    					 		<% count += 1 %>
-    					 <% end %>
-             <% end %>
-           <% end %>
+					 		<% @news.each do |new| %>
+					 				<% if count == 0%>
+					 						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+									<% count += 1 %>
+					 				<% else %>
+					 						<li data-target="#carousel-example-generic" data-slide-to="<%= count %>"></li>
+					 						<% count += 1 %>
+					 				<% end %>
+							<% end %>
 			 </ol>
 			 <!-- Wrapper for slides -->
 			 <% @news.each do |new| %>
@@ -50,21 +48,22 @@
 			 <div class="row">
 					 <div class="col-lg-12">
 							 <h1 class="page-header">
-									 Welcome to Modern Business
+									 Bienvenidos a DESTINY
 							 </h1>
 					 </div>
+           <%= @courses.first(3).each do |course| %>
 					 <div class="col-md-4">
-							 <div class="panel panel-default">
-									 <div class="panel-heading">
-											 <h4><i class="fa fa-fw fa-check"></i> Bootstrap v3.2.0</h4>
-									 </div>
-									 <div class="panel-body">
-											 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-											 <a href="#" class="btn btn-default">Learn More</a>
-									 </div>
-							 </div>
+					 		 <div class="panel panel-default">
+					 				 <div class="panel-heading">
+					 						 <h4><i class="fa fa-fw fa-check"></i> course.title </h4>
+					 				 </div>
+					 				 <div class="panel-body">
+					 						 <p> course.description </p>
+					 				 </div>
+					 		 </div>
 					 </div>
-					 <div class="col-md-4">
+           <%  end %>
+		<!--			 <div class="col-md-4">
 							 <div class="panel panel-default">
 									 <div class="panel-heading">
 											 <h4><i class="fa fa-fw fa-gift"></i> Free &amp; Open Source</h4>
@@ -86,7 +85,7 @@
 									 </div>
 							 </div>
 					 </div>
-			 </div>
+			 </div> -->
 			 <!-- /.row -->
 
 			 <!-- Portfolio Section -->
