@@ -1,0 +1,44 @@
+    <div class='container'>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <%= form_for :user, url: "/register" do |f| %>
+          <div class="row">
+            <h1>¡Registrate hoy!<h2>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <label>Nombre de usuario:</label>
+            </div>
+            <div class="col-md-3">
+              <%= f.text_field :user_name %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <label>E-mail:</label>
+            </div>
+            <div class="col-md-3">
+              <%= f.text_field :email %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <label>Contraseña:</label>
+            </div>
+            <div class="col-md-3">
+              <%= f.password_field :password %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <label>Confirma tu contreseña:</label>
+            </div>
+            <div class="col-md-3">
+              <%= f.password_field :password_confirm %>
+            </div>
+          </div>
+
+          <%= end %>
+        </div>
+      </div>
+    </div>
