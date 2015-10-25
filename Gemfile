@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
-
+gem 'paperclip', '~>4.1.1'
+gem 'mysql2', '~>0.3.13'
+gem 'bootstrap-sass', '~>3.2.0'
+gem 'autoprefixer-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
@@ -25,7 +28,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 # Use merit as bagde, point and rank system
-gem 'merit' 
+gem 'merit'
 # Use Unicorn as the app server
 gem 'unicorn'
 
