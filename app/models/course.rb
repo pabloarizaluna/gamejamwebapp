@@ -4,6 +4,6 @@ class Course < ActiveRecord::Base
   has_many :affinities
   validates :name, presence: true
   validates :description, presence: true, length: { maximum: 50 }
-  validates :type, presence: true
+  validates :cost, presence: true
   validates :photo, presence: true
 end

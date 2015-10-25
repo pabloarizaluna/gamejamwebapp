@@ -23,9 +23,10 @@ ActiveRecord::Schema.define(version: 20151024211537) do
     t.string   "name",        limit: 255
     t.datetime "end_date"
     t.text     "description", limit: 65535
-    t.string   "type",        limit: 255
+    t.string   "quality",     limit: 255
     t.binary   "photo",       limit: 65535
     t.boolean  "finished"
+    t.integer  "cost",        limit: 4
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end
